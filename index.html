@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+  </head>
+  <body>
+
+    <header class="header-event-project">
+
+      <h1 class="title-of-project">Calendario de Eventos</h1>
+
+    </header>
+
+    <main class="app-crud-container">
+
+      <form class="form-event" id="form-event">
+
+          <div class="container">
+            <label class="label-form-event" for="name-event">Nombre del eveneto</label>
+            <input class="input-form-event" type="text" name="name-event-input" id="name-event" placeholder="Nombre del Evento">
+          </div>
+
+          <div class="container">
+            <label class="label-form-event" for="date-event">Fecha del Evento</label>
+            <input class="input-form-event" type="date" name="date-event-input" id="date-event">
+          </div>
+
+          <div class="container">
+            <label class="label-form-event" for="date-event">Hora del Evento</label>
+            <input class="input-form-event" type="time" name="date-event-input" id="hour-event">
+          </div>
+
+          <div class="container">
+            <label class="label-form-event" for="decription-event">Descripción</label>
+            <textarea class="textarea-form-event" name="decription-event-textarea" id="decription-event" rows="5" maxlength="250"></textarea>
+          </div>
+
+          <button class="button-form-event" name="button-submit-event" id="button-submit-of-event" type="submit">Agregar Evento</button>
+
+      </form>
+
+      <div class="event-list-container">
+
+        <h2 class="event-list-title">Eventos</h2>
+        <ul class="event-list" id="event-list">
+        </ul>
+
+      </div>
+
+      <script type="module" src="./main.js"></script>
+
+    </main>
+
+
+  </body>
+</html>
