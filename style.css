@@ -1,0 +1,138 @@
+body{
+  font-family: 'Inter', sans-serif;
+  background-color: rgb(13, 14, 29);
+  color: #ffffffda;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.app-crud-container{
+  box-sizing: border-box;
+  width: 100%;
+  height: 70vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.title-of-project{
+  text-align: center;
+}
+
+.form-event{
+  background-color: rgb(34, 35, 51);
+  width: 100%;
+  max-width: 400px;
+  max-height: 410px;
+  border-radius: 10px;
+  padding: 30px 50PX;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-form-event{
+  height: 25px;
+  border: none;
+  outline: none;
+  padding-left: 5px;
+  border-radius: 4px;
+}
+
+.input-form-event:focus{
+  outline: 2px solid skyblue;
+  border: none;
+}
+
+.textarea-form-event{
+  resize: none;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+
+.textarea-form-event:focus{
+  outline: 2px solid skyblue;
+  border: none;
+}
+
+.button-form-event{
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 100ms linear, color 100ms linear;
+}
+
+.button-form-event:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-editar{
+  height: 40px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 100ms linear, color 100ms linear;
+}
+
+.btn-editar:hover{
+  background-color: green;
+  color: #fff;
+}
+
+.btn-eliminar{
+  height: 40px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 100ms linear, color 100ms linear;
+}
+
+.btn-eliminar:hover{
+  background-color: red;
+  color: #fff;
+}
+
+.event-list-container{
+  background-color: rgb(34, 35, 51);
+  list-style: none;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 1000px;
+  border-radius: 10px;
+  padding: 30px 50PX;
+  gap: 20px;
+}
+
+.event-list{
+  list-style: none;
+  padding: 0;
+}
+
+.event-list-title{
+  text-align: center;
+  margin: 0;
+}
+
+.event-list li{
+  background-color: rgb(63, 66, 94);
+  display: grid;
+  grid-template-columns: 1fr 80px 80px;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  text-wrap: wrap;
+}
