@@ -148,4 +148,9 @@ body{
     max-width: 400px;
   }
 
+  .event-list li{
+    display: flex;
+    flex-direction: column;
+  }
+
 }
