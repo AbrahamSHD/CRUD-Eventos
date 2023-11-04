@@ -1,5 +1,3 @@
-// import "normalize.css"
-
 import a from "normalize.css"
 
 let listaEventos = []
