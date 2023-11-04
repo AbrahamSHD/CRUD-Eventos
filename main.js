@@ -18,6 +18,8 @@ const horaInput = document.querySelector('#hour-event')
 const descripcionInput = document.querySelector('#decription-event')
 const btnAgregar = document.querySelector('#button-submit-of-event')
 
+window.addEventListener('load', cargarEventoLocalStorage);
+
 formulario.addEventListener('submit', validarFormulario)
 
 function validarFormulario(eventoValidar){
@@ -49,6 +51,8 @@ function agregarEvento(){
     formulario.reset()
 
     limpiarEvento()
+
+    guardarDB()
 
 }
 
@@ -111,6 +115,14 @@ function cargarEvento(evento){
 
 }
 
+function cargarEventoLocalStorage(){
+
+    listaEventos = JSON.parse(localStorage.getItem('evento')) || [  ] 
+
+    mostrarEventos()
+
+}
+
 function editarEvento(){
 
     objetoEvento.titulo = tituloInput.value
@@ -129,6 +141,7 @@ function editarEvento(){
         }
     })
 
+    guardarDB()
     limpiarHTML()
     mostrarEventos()
     formulario.reset()
@@ -140,6 +153,8 @@ function editarEvento(){
 function eliminarEvento(titulo){
     
     listaEventos = listaEventos.filter( evento => evento.titulo !== titulo )
+
+    guardarDB()
 
     limpiarHTML()
 
@@ -156,7 +171,7 @@ function limpiarHTML(){
 
 }
 
-function guardarDB (){
+function guardarDB(){
 
     localStorage.setItem('evento', JSON.stringify(listaEventos))
 
