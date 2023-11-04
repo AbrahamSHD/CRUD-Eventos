@@ -1,4 +1,6 @@
-import "normalize.css"
+// import "normalize.css"
+
+import a from "normalize.css"
 
 let listaEventos = []
 
@@ -153,5 +155,11 @@ function limpiarHTML(){
     while( contenedorEventos.firstChild ){
         contenedorEventos.removeChild(contenedorEventos.firstChild) 
     }
+
+}
+
+function guardarDB (){
+
+    localStorage.setItem('evento', JSON.stringify(listaEventos))
 
 }
